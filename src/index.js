@@ -2,6 +2,17 @@
 const SDK = window.requirejs('w3reality-sdk');
 // console.log('SDK:', SDK);
 
+require('../css/style.css');
+
+var _sceneController = require('../js/controllers/scene-controller');
+
+var _sceneController2 = _interopRequireDefault(_sceneController);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var scene = new _sceneController2.default();
+
+
 class App extends SDK.App {
     // override
     static createWorld() {
@@ -16,6 +27,7 @@ class App extends SDK.App {
     constructor(data, name="foo") {
         super(data, name);
         this.set_block(0, 0, 4, BLOCK.MODEL_TEST);
+        this.setScene(scene);
         this.say('welcome');
     }
 
