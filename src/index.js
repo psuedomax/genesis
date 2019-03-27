@@ -2,9 +2,9 @@
 const SDK = window.requirejs('w3reality-sdk');
 // console.log('SDK:', SDK);
 
-require('../css/style.css');
+require('css/style.css');
 
-var _sceneController = require('../js/controllers/scene-controller');
+var _sceneController = require('js/controllers/scene-controller');
 
 var _sceneController2 = _interopRequireDefault(_sceneController);
 
